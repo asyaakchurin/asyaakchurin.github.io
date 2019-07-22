@@ -25,9 +25,6 @@
   <!-- SLICK SLIDER JS -->
   <script src="vendor/slick/slick/slick.min.js"></script>
 
-  <script src="scripts/blotter.min.js"></script>
-  <script src="scripts/blotter.js"></script>
-
   <!-- INCLUDE LOCAL SCRIPT FILE -->
   <script src="scripts/index.js"></script>
 
@@ -38,18 +35,20 @@
     * move these up, to be above the index.js file
     * you probably only need one of these, just include the min one
    -->
-
+   <script src="scripts/blotter.min.js"></script>
+   <script src="scripts/blotter.js"></script>
 
 </head>
 <body>
 
-  <div class='welcome-screen'>
-    <div class='welcome-box'>
+  <div class="welcome-screen">
+    <div class="welcome-box">
+      
         <script>
-          var text = new Blotter.Text('MOOOOOOOOOOOOOOD', {
-            family : 'serif',
+          var text = new Blotter.Text("MOOOOOOOOOOOOOOD", {
+            family : "serif",
             size : 120,
-            fill : '#171717'
+            fill : "#171717"
           });
 
           var material = new Blotter.ChannelSplitMaterial();
@@ -58,45 +57,48 @@
 
           var scope = blotter.forText(text);
 
-          scope.appendTo(document.body);
+          scope.appendTo(document.querySelector('.welcome-box'));
       </script>
+    
   </div>
 
-  <form id='mood-form'>
-    <div class='input-box'>
+  <form id="mood-form">
+    <div class="input-box">
 
       <!-- TEACHER NOTE:
       * somehow you got double quotes here that are "curly quotes", this often happens
       * when you copy something from an editor that is not in Sublime
 
       -->
-      <input class='moodInput' type='text' />
+      <input class="moodInput" type="text" />
+      <input class="button" type="submit" value="TELL ME HOW YOU REALLY FEEL">
       <!-- <input class=”moodInput” type=”text”/> -->
 <!--     <input type="submit"/> -->
     </div>
 
-    <div class='button-box'>
-<!--     <button type=”submit” id=”submitButton” name=”button”>TELL ME HOW YOU REALLY FEEL</button> -->
-      <input class='button' type='button' value='TELL ME HOW YOU REALLY FEEL'>
-    </div>
+<!--     <div class="button-box">
+    <button type=”submit” id=”submitButton” name=”button”>TELL ME HOW YOU REALLY FEEL</button>
+      
+    </div> -->
   </form>
 
-    <div class='audio-box'>
+    <div class="audio-box">
       <!-- <section id=”playAudioHere”></section> -->
+
     </div>
 
   <!-- soundcloud test -->
-  <div class='love'>
+<!--   <div class="love">
     <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1229071&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
   </div>
 
-  <div class='happy'>
+  <div class="happy">
     <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/436056279&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
   </div>
 
-  <div class='sad'>
+  <div class="sad">
     <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/323391979&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-  </div>
+  </div> -->
 
 
 
@@ -127,6 +129,9 @@
       </div>
     </div> -->
 
+  </div>
+  <div class="footer">
+    <p>MOOOOOOOOOOOOOOD was created by <a href="https://www.linkedin.com/in/asya-akchurin-41ba8951/">Asya Akchurin</a> and is made possible by <a href="https://soundcloud.com/ayfmd">SoundCloud</a>.</p>  
   </div>
 
 </body>
