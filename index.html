@@ -1,21 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Asya</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MOOD</title>
+
+  <!-- RESET -->
+  <link rel="stylesheet" href="vendor/reset/reset.css">
+
+  <!-- SLICK SLIDER CSS -->
+  <link rel="stylesheet" href="vendor/slick/slick/slick.css">
+
+  <!-- SLICK SLIDER CSS -->
+  <link rel="stylesheet" href="vendor/slick/slick/slick-theme.css">
+
+  <!-- STYLING -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- INCLUDE JQUERY LOCALLY -->
+  <script src="vendor/jquery/jquery.js"></script>
+
+
+  <!-- SLICK SLIDER JS -->
+  <script src="vendor/slick/slick/slick.min.js"></script>
+
+  <script src="scripts/blotter.min.js"></script>
+  <script src="scripts/blotter.js"></script>
+
+  <!-- INCLUDE LOCAL SCRIPT FILE -->
+  <script src="scripts/index.js"></script>
+
+   <script src="scripts/data.js"></script>
+
+   <!-- TEACHER NOTE -
+    * move these into the vendor folder instead of the scripts folder
+    * move these up, to be above the index.js file
+    * you probably only need one of these, just include the min one
+   -->
+
+
 </head>
 <body>
-	
-	<!-- replace the email there with my email to grt form submissions -->
-	<!-- add place holder attribute to these so that there is background text on the input -->
 
-	<form action="https://formspree.io/aakch93@gmail.com" method="POST">
-	  <input type="text" name="name" placeholder="add your name!">
-	  <input type="email" name="_replyto" placeholder="add your email!">
-	  <input type="submit" value="Send">
-	</form>
+  <div class='welcome-screen'>
+    <div class='welcome-box'>
+        <script>
+          var text = new Blotter.Text('MOOOOOOOOOOOOOOD', {
+            family : 'serif',
+            size : 120,
+            fill : '#171717'
+          });
+
+          var material = new Blotter.ChannelSplitMaterial();
+
+          var blotter = new Blotter(material, { texts : text });
+
+          var scope = blotter.forText(text);
+
+          scope.appendTo(document.body);
+      </script>
+  </div>
+
+  <form id='mood-form'>
+    <div class='input-box'>
+
+      <!-- TEACHER NOTE:
+      * somehow you got double quotes here that are "curly quotes", this often happens
+      * when you copy something from an editor that is not in Sublime
+
+      -->
+      <input class='moodInput' type='text' />
+      <!-- <input class=”moodInput” type=”text”/> -->
+<!--     <input type="submit"/> -->
+    </div>
+
+    <div class='button-box'>
+<!--     <button type=”submit” id=”submitButton” name=”button”>TELL ME HOW YOU REALLY FEEL</button> -->
+      <input class='button' type='button' value='TELL ME HOW YOU REALLY FEEL'>
+    </div>
+  </form>
+
+    <div class='audio-box'>
+      <!-- <section id=”playAudioHere”></section> -->
+    </div>
+
+  <!-- soundcloud test -->
+  <div class='love'>
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1229071&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  </div>
+
+  <div class='happy'>
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/436056279&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  </div>
+
+  <div class='sad'>
+    <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/323391979&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+  </div>
+
+
+
+
+
+
+<!-- TO DO: CAROUSEL BELOW -->
+<!--   <div class="container">
+    <h2>Carousel Section</h2>
+    <div class="carousel">
+      <div class="carousel-slide">
+        <img src="images/carousel/one.jpg" alt="Lion">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/carousel/two.jpg" alt="Waterfall">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/carousel/three.jpg" alt="Seal">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/carousel/four.jpg" alt="Eclipse">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/carousel/five.jpg" alt="Cute Polar Bear">
+      </div>
+      <div class="carousel-slide">
+        <img src="images/carousel/six.jpg" alt="Sea Lion">
+      </div>
+    </div> -->
+
+  </div>
 
 </body>
+
 </html>
