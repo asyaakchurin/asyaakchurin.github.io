@@ -1,5 +1,7 @@
 # asyaakchurin.github.io
 
+https://sad-davinci-bcfd1c.netlify.com/
+
 Final project:
 When you don't want to hear soundcloud ads on your playlists or are too picky in choosing a song
 (disclaimer- based on my weird tech house music taste only)
